@@ -17,7 +17,7 @@ Tips:如需修改版本需要把以下四个文件修改，构建好后进入容
 
 ​		可以到 [官方仓库](https://debian.sipwise.com/debian-security/pool/main/l/linux/)下载以下几个文件
 
-​		可以到 [官方仓库](https://debian.sipwise.com/debian-security/pool/main/l/linux/)下载以下几个文件
+​		可以到 [镜像仓库](https://mirrors.ustc.edu.cn/ubuntu/pool/main/l/linux/)下载以下几个文件
 
 ```
 linux-image-unsigned-5.4.0-205-generic_5.4.0-205.225_amd64.deb
