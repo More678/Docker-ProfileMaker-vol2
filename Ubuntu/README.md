@@ -14,3 +14,12 @@ linux-headers-5.4.0-205-generic_5.4.0-205.225_amd64.deb
 linux-headers-5.4.0-205_5.4.0-205.225_all.deb
 linux-modules-5.4.0-205-generic_5.4.0-205.225_amd64.deb
 ```
+
+具体使用命令如下
+
+```bash
+docker build --tag profile:v1 . 
+docker run -it -p 7080:8000 profile:v1 bash
+cd /app
+python3 -m http.server
+```
