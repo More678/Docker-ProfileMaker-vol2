@@ -5,8 +5,7 @@ Linux version 5.4.0-205-generic (buildd@lcy02-amd64-055) (gcc version 9.4.0 (Ubu
 ```
 
 Tips:如需修改版本需要把以下四个文件修改，构建好后进入容器，打包好的Profile文件在/app目录下
-
-​		可以到 [官方仓库](https://debian.sipwise.com/debian-security/pool/main/l/linux/)下载以下几个文件
+https://launchpad.net/ubuntu/+source/linux
 
 ​		可以到 [镜像仓库](https://mirrors.ustc.edu.cn/ubuntu/pool/main/l/linux/)下载以下几个文件
 
