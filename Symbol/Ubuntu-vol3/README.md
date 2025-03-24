@@ -20,3 +20,5 @@ docker run -it -p 7080:8000 profile:v1 bash
 cd /volatility
 python3 -m http.server
 ```
+
+Tips:如无法从Github上直接wget获取dwarf2json，可使用COPY复制本目录下的dwarf2json，版本为0.9
