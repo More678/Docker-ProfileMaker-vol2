@@ -40,15 +40,15 @@ RUN ls -la /lib/modules/5.4.0-205-generic/ \
     && mkdir -p /lib/modules/5.4.0-205-amd64/ \
     && ln -sf /usr/src/linux-headers-5.4.0-205-generic /lib/modules/5.4.0-205-amd64/build
 
-RUN wget https://www.prevanders.net/libdwarf-0.8.0.tar.xz -P /src/ && \
-    tar -xf libdwarf-0.8.0.tar.xz && \
-    cd libdwarf-0.8.0/ && \
+RUN wget https://www.prevanders.net/libdwarf-0.6.0.tar.xz -P /src/ && \
+    tar -xf libdwarf-0.6.0.tar.xz && \
+    cd libdwarf-0.6.0/ && \
     mkdir build && \
     cd build/ && \
     ../configure && \
     make -j16 && make install && \
-    # sed -i 's/\/usr\/local\/bin\/dwarfdump/dwarfdump/g' Makefile \
-    ln -s /usr/local/bin/dwarfdump /usr/bin
+    sed -i 's/\/usr\/local\/bin\/dwarfdump/dwarfdump/g' Makefile
+    # ln -s /usr/local/bin/dwarfdump /usr/bin
     # dwarfdump -V > /app/dwarfdump_version
 
 WORKDIR /src/linux
@@ -64,6 +64,3 @@ WORKDIR /app
 RUN zip ubuntu-5.4.0-205-generic.zip *
 
 CMD ["/bin/bash"]
-# docker run -it -p 7080:8000 profile:v1 bash
-# cd /app
-# python3 -m http.server
